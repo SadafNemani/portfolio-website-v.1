@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import Image from "next/image";
-import ScrollFloat from "../layout/ScrollFloat";
+import ScrollFloat from "../ui/ScrollFloat";
 
 gsap.registerPlugin(ScrollTrigger);
 

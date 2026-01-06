@@ -1,10 +1,10 @@
 import "./globals.css";
-import Navbar from "@/components/navbar/Navbar";
+import Navbar from "@/components/common/Navbar";
 import { Montserrat } from 'next/font/google';
-import Footer from "@/components/footer/Footer";
-import GradientHalo from "@/components/layout/GradientHalo";
-import ParticleDrift from "@/components/layout/ParticleDrift";
-import CursorAura from "@/components/layout/CursorAura";
+import Footer from "@/components/common/Footer";
+import GradientHalo from "@/components/ui/GradientHalo";
+import ParticleDrift from "@/components/ui/ParticleDrift";
+import CursorAura from "@/components/ui/CursorAura";
 
 const montserrat = Montserrat({
   subsets: ['latin'],

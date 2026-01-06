@@ -22,7 +22,7 @@ import {
   SiFramer,
   SiMysql,
 } from "react-icons/si";
-import ScrollFloat from "../layout/ScrollFloat";
+import ScrollFloat from "../ui/ScrollFloat";
 
 
 gsap.registerPlugin(ScrollTrigger);
