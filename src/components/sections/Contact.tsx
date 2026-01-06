@@ -1,10 +1,15 @@
 "use client";
 
+import type { Lang } from "@/types";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-export default function ContactCTA() {
+type ContactProps = {
+    lang: Lang;
+};
+
+export default function Contact({ lang }: ContactProps) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -15,7 +20,7 @@ export default function ContactCTA() {
 
   return (
     <section
-      id="contact-cta"
+      id="contact"
       className="relative py-40 text-center overflow-hidden bg-transparent"
     >
       <div className="max-w-3xl mx-auto px-6 relative z-10">

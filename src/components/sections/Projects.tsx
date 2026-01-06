@@ -6,6 +6,11 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import Image from "next/image";
 import ScrollFloat from "../ui/ScrollFloat";
+import type { Lang } from "@/types";
+
+type ProjectsProps = {
+    lang: Lang;
+};
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -34,7 +39,7 @@ const projects = [
   },
 ];
 
-export default function Projects() {
+export default function Projects({ lang }: ProjectsProps) {
   const sectionRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<HTMLDivElement[]>([]);
 

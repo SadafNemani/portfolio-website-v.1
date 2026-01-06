@@ -1,9 +1,10 @@
-import Footer from "@/components/common/Footer";
+import "./globals.css";
 import Navbar from "@/components/common/Navbar";
-import CursorAura from "@/components/ui/CursorAura";
+import { Montserrat } from 'next/font/google';
+import Footer from "@/components/common/Footer";
 import GradientHalo from "@/components/ui/GradientHalo";
 import ParticleDrift from "@/components/ui/ParticleDrift";
-import { Montserrat } from 'next/font/google';
+import CursorAura from "@/components/ui/CursorAura";
 
 export const montserrat = Montserrat({
   subsets: ['latin'],
@@ -13,10 +14,8 @@ export const montserrat = Montserrat({
 
 export const metadata = { title: "Sadaf Nemani" };
 
-export default function LangLayout({ children, params }: { children: React.ReactNode; params: { lang: string }; }) {
-    const isRTL = params.lang === "ar" || "ku";
-
-    return (
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
     <html lang="en" dir="ltr">
       <body className={`${montserrat.variable} font-sans bg-neutral-55 text-neutral-10 min-h-screen relative`}>
         
@@ -31,5 +30,5 @@ export default function LangLayout({ children, params }: { children: React.React
         <Footer />
       </body>
     </html>
-    )
+  );
 }

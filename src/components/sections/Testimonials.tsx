@@ -6,6 +6,11 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { Quote } from "lucide-react";
 import ScrollFloat from "../ui/ScrollFloat";
+import type { Lang } from "@/types";
+
+type TestimonialsProps = {
+    lang: Lang;
+};
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -30,7 +35,7 @@ const testimonials = [
   },
 ];
 
-export default function Testimonials() {
+export default function Testimonials({ lang }: TestimonialsProps) {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
 

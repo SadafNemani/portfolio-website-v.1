@@ -23,11 +23,16 @@ import {
   SiMysql,
 } from "react-icons/si";
 import ScrollFloat from "../ui/ScrollFloat";
+import type { Lang } from "@/types";
+
+type SkillsProps = {
+    lang: Lang;
+};
 
 
 gsap.registerPlugin(ScrollTrigger);
 
-const services = [
+const skills = [
   {
     title: "Design",
     icon: <PenTool className="w-10 h-10 text-primary" />,
@@ -55,7 +60,7 @@ const services = [
   },
 ];
 
-export default function Services() {
+export default function Skills({ lang }: SkillsProps) {
   const sectionRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<HTMLDivElement[]>([]);
 
@@ -84,7 +89,7 @@ export default function Services() {
   return (
     <section
       ref={sectionRef}
-      id="services"
+      id="skills"
       className="relative py-24 bg-transparent overflow-hidden"
     >
       <div className="max-w-6xl mx-auto px-6 text-center">
@@ -104,7 +109,7 @@ export default function Services() {
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-          {services.map((service, i) => (
+          {skills.map((skill, i) => (
             <div
               key={i}
               ref={(el) => {
@@ -113,17 +118,17 @@ export default function Services() {
               className="group relative p-8 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 shadow-lg transition-all duration-500 hover:shadow-[0_0_25px_rgba(99,186,11,0.25)]"
             >
               <div className="flex justify-center mb-6 transform transition-transform duration-500 group-hover:rotate-12">
-                {service.icon}
+                {skill.icon}
               </div>
               <h3 className="text-2xl font-semibold mb-3 text-white">
-                {service.title}
+                {skill.title}
               </h3>
               <p className="text-neutral-400 text-base leading-relaxed">
-                {service.desc}
+                {skill.desc}
               </p>
 
               <div className="flex flex-wrap justify-center gap-3">
-                {service.tools.map((Tool, idx) =>
+                {skill.tools.map((Tool, idx) =>
                   typeof Tool === "string" ? (
                     <span
                       key={idx}
