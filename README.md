@@ -1,19 +1,16 @@
-# 🌿 Sadaf Nemani — Portfolio
+# Sadaf Nemani — website v.1
 
-This is my personal portfolio website — a creative showcase of my skills in design, code, and animation.  
+This is the first version of my personal portfolio website.  
 Built with **Next.js**, **TypeScript**, **Tailwind CSS**, and **GSAP**.
 
-## 🚀 Tech Stack
+## Tech Stack
 - Next.js 15
 - TypeScript
 - Tailwind CSS
 - GSAP
 - Framer Motion (coming soon)
 
-## 🧠 About
-I craft interactive, visually appealing, and performance-optimized web experiences that blend creativity and technology.
-
-## 🌍 Live Preview
+## Live Preview
 Coming soon...
 
 ---
