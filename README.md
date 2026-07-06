@@ -8,10 +8,6 @@ Built with **Next.js**, **TypeScript**, **Tailwind CSS**, and **GSAP**.
 - TypeScript
 - Tailwind CSS
 - GSAP
-- Framer Motion (coming soon)
-
-## Live Preview
-Coming soon...
 
 ---
 
